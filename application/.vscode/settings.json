@@ -1,0 +1,13 @@
+{
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.formatOnSaveMode": "modificationsIfAvailable",
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": false,
+	"editor.trimAutoWhitespace": true,
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"java.autobuild.enabled": false,
+	"java.configuration.updateBuildConfiguration": "automatic",
+}
