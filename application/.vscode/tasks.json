@@ -1,0 +1,38 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build WAR (exploded)",
+			"type": "shell",
+			"command": "chmod +x mvnw; ./mvnw compile war:exploded",
+			"windows": {
+				"command": ".\\mvnw.cmd compile war:exploded"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "silent",
+				"panel": "dedicated"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Build WAR",
+			"type": "shell",
+			"command": "chmod +x mvnw; ./mvnw compile war:war",
+			"windows": {
+				"command": ".\\mvnw.cmd compile war:war"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"presentation": {
+				"reveal": "silent",
+				"panel": "dedicated"
+			}
+		}
+	]
+}

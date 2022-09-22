@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"redhat.java",
+		"vscjava.vscode-java-dependency",
+		"vscjava.vscode-maven",
+		"redhat.vscode-community-server-connector"
+	]
+}
