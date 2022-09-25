@@ -46,13 +46,13 @@ public class SecretCredential {
 		}
 	}
 
-	SecretCredential(String password) {
+	public SecretCredential(String password) {
 		salt = new byte[SALT_BYTES];
 		sr.nextBytes(salt);
 		hash = hashPassword(password);
 	}
 
-	SecretCredential(byte[] hash, byte[] salt) {
+	public SecretCredential(byte[] hash, byte[] salt) {
 		this.hash = hash;
 		this.salt = salt;
 	}

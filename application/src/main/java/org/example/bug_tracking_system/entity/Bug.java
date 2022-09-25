@@ -20,6 +20,8 @@ public class Bug {
 
 	/** Create a new bug report */
 	public Bug(String title, String description, BugSeverity severity, Project project, User creator) {
+		if(project==null || creator==null)
+			throw new IllegalArgumentException("Project and creator-user must be specified");
 		this.title = title;
 		this.description = description;
 		this.openedOn = LocalDateTime.now();
