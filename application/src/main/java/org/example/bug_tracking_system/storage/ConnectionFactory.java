@@ -9,17 +9,24 @@ public class ConnectionFactory {
 
 	// Configuration constants
 	private static final String PATH_TO_SQLITE_DB = "main.db";
-	//TODO: Make constants out of table names
+	// TODO: Make constants out of table names
 
 	// State variables
 	private static boolean is_initialised = false;
 
 	static Connection getConnection() {
 		try {
+			Class.forName("org.sqlite.JDBC");
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException("Couldn't load database driver");
+		}
+
+		try {
 			Connection con = DriverManager.getConnection("jdbc:sqlite:" + PATH_TO_SQLITE_DB);
 			con.setAutoCommit(true);
 
-			if (is_initialised) return con;
+			if (is_initialised)
+				return con;
 			initTables(con);
 			is_initialised = true;
 			return con;

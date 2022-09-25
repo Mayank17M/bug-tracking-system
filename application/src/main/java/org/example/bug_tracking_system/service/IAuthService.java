@@ -25,10 +25,12 @@ public interface IAuthService {
 	/**
 	 * Register an imported user into the system
 	 *
-	 * @param user The user to register and update
+	 * @param email    The email of the user to register and update
+	 * @param password The new password of the user to update
+	 * @param role     The role for which the user is to be registered
 	 * @return Whether the registration was successful
 	 */
-	boolean registerUser(User user);
+	boolean registerUser(String email, String password, String role);
 
 	/**
 	 * Log in a registered user into a session
@@ -36,9 +38,9 @@ public interface IAuthService {
 	 * @param email    The email of the user trying to login
 	 * @param password The password of the user trying to login
 	 * @param session  The session into which the user should be logged into
-	 * @return The user if login succeeded, else null
+	 * @return Whether the login succeeded
 	 */
-	User loginUser(String email, String password, HttpSession session);
+	boolean loginUser(String email, String password, HttpSession session);
 
 	/**
 	 * Sign out the currently signed in user from a session
