@@ -1,0 +1,25 @@
+.main-div {
+  width: 630px;
+  border: 3px solid cyan;
+  border-width: thin;
+  font-size: larger;
+  font-weight: 600;
+  margin: 50px;
+}
+
+.input-div {
+  margin: 20px;
+}
+
+input {
+  width: 390px;
+  border: 1px solid lightseagreen;
+  border-radius: 10px;
+  height: 30px;
+}
+
+label {
+  display: inline-block;
+  width: 160px;
+  height: 30px;
+}
